@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>BrCommerce.Detect</PackageId>
+    <Description>Detects the e-commerce platform behind a store (VTEX, Nuvemshop, Tray, Loja Integrada, Shopify, Magento and 15+ others common in Brazil), discovers its public product feeds and extracts the store name. Zero dependencies.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Rules\rules.json" LogicalName="BrCommerce.Detect.rules.json" />
+  </ItemGroup>
+
+</Project>

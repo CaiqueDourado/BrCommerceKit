@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>BrCommerce.Feeds</PackageId>
+    <Description>Streaming reader for product feeds as they really exist in Brazil: Google Merchant (RSS/Atom), Facebook catalog, Portuguese field names (nome, preco_por, disponibilidade, ean...), AdTail-style XML and Shopify products.json. Robust price parsing for R$/BRL and other currencies. Zero dependencies.</Description>
+  </PropertyGroup>
+
+</Project>

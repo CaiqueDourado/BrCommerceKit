@@ -1,0 +1,47 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*.*.*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Version from tag
+        run: echo "VERSION=${GITHUB_REF_NAME#v}" >> "$GITHUB_ENV"
+
+      - name: Test
+        run: dotnet test -c Release
+
+      - name: Pack libraries and tool
+        run: dotnet pack -c Release -o artifacts -p:Version=$VERSION
+
+      - name: Publish CLI binaries
+        run: |
+          for rid in linux-x64 win-x64 osx-arm64; do
+            dotnet publish src/BrCommerce.Cli -c Release -r $rid --self-contained false \
+              -p:PublishSingleFile=true -p:Version=$VERSION -o publish/$rid
+            (cd publish/$rid && zip -q ../../artifacts/brcommerce-$VERSION-$rid.zip *)
+          done
+
+      - name: GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: artifacts/*
+          generate_release_notes: true
+
+      - name: Publish to NuGet.org (only when NUGET_API_KEY is set)
+        if: env.NUGET_API_KEY != ''
+        run: dotnet nuget push "artifacts/*.nupkg" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json --skip-duplicate

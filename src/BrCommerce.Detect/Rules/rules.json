@@ -1,0 +1,212 @@
+{
+  "version": 1,
+  "platforms": [
+    {
+      "id": "vtex",
+      "name": "VTEX",
+      "signatures": [
+        { "pattern": "vteximg\\.com\\.br", "weight": 1.0 },
+        { "pattern": "vtexassets\\.com", "weight": 1.0 },
+        { "pattern": "\\bvtex\\b", "weight": 0.6 }
+      ],
+      "feeds": [
+        { "path": "XMLData/googleshopping.xml", "mustContain": "CDATA" },
+        { "path": "XMLData/facebook.xml", "mustContain": "CDATA" }
+      ]
+    },
+    {
+      "id": "nuvemshop",
+      "name": "Nuvemshop",
+      "signatures": [
+        { "pattern": "\\bnuvem ?shop\\b", "weight": 0.8 },
+        { "pattern": "\\btiendanube\\b", "weight": 0.8 }
+      ],
+      "feeds": [
+        { "path": "fb_catalog.xml/", "mustContain": "<rss" },
+        { "path": "google_shopping.xml/", "mustContain": "<rss" }
+      ]
+    },
+    {
+      "id": "shopify",
+      "name": "Shopify",
+      "signatures": [
+        { "pattern": "cdn\\.shopify\\.com", "weight": 1.0 },
+        { "pattern": "we use shopify as our ecommerce platform", "weight": 1.0 },
+        { "pattern": "\\bshopify\\b", "weight": 0.7 }
+      ],
+      "feeds": [
+        { "path": "products.json", "mustContain": "\"products\":" }
+      ]
+    },
+    {
+      "id": "magento",
+      "name": "Magento / Adobe Commerce",
+      "signatures": [
+        { "pattern": "/static/version\\d+/frontend/", "weight": 1.0 },
+        { "pattern": "\\bmagento\\b", "weight": 0.7 },
+        { "pattern": "catalog/product_compare", "weight": 0.7 }
+      ],
+      "feeds": [
+        { "path": "media/amfeed/feeds/google.xml", "mustContain": "CDATA" }
+      ]
+    },
+    {
+      "id": "woocommerce",
+      "name": "WooCommerce",
+      "signatures": [
+        { "pattern": "wp-content/plugins/woocommerce", "weight": 1.0 },
+        { "pattern": "\\bwoocommerce\\b", "weight": 0.8 }
+      ]
+    },
+    {
+      "id": "lojaintegrada",
+      "name": "Loja Integrada",
+      "signatures": [
+        { "pattern": "\\bloja ?integrada\\b", "weight": 0.8 }
+      ]
+    },
+    {
+      "id": "tray",
+      "name": "Tray",
+      "signatures": [
+        { "pattern": "tray\\.com\\.br", "weight": 0.8 },
+        { "pattern": "\\btray\\b", "weight": 0.3 }
+      ]
+    },
+    {
+      "id": "wix",
+      "name": "Wix",
+      "signatures": [
+        { "pattern": "static\\.wixstatic\\.com", "weight": 1.0 },
+        { "pattern": "static\\.parastorage\\.com", "weight": 1.0 },
+        { "pattern": "\\bwix\\b", "weight": 0.3 }
+      ]
+    },
+    {
+      "id": "mercadoshops",
+      "name": "Mercado Shops",
+      "signatures": [
+        { "pattern": "\\bmercado ?shops\\b", "weight": 0.8 },
+        { "pattern": "mercadopago-point", "weight": 0.4 }
+      ],
+      "feedTemplates": [
+        {
+          "extract": "shopid:\\s*['\"]?([A-Za-z0-9_-]+)",
+          "url": "https://www.mercadoshops.com.br/darwin/rss/{0}/gshopping",
+          "mustContain": "<rss"
+        }
+      ]
+    },
+    {
+      "id": "prestashop",
+      "name": "PrestaShop",
+      "signatures": [
+        { "pattern": "\\bprestashop\\b", "weight": 0.8 }
+      ]
+    },
+    {
+      "id": "uolloja",
+      "name": "UOL Loja",
+      "signatures": [
+        { "pattern": "\\buol ?loja\\b", "weight": 0.8 }
+      ]
+    },
+    {
+      "id": "iluria",
+      "name": "Iluria",
+      "signatures": [
+        { "pattern": "\\biluria\\b", "weight": 0.8 }
+      ]
+    },
+    {
+      "id": "linx",
+      "name": "Linx Commerce",
+      "signatures": [
+        { "pattern": "\\blinx\\b", "weight": 0.4 }
+      ]
+    },
+    {
+      "id": "ezcommerce",
+      "name": "EzCommerce / Lynx",
+      "signatures": [
+        { "pattern": "\\bezcommerce\\b", "weight": 0.8 },
+        { "pattern": "\\blynx\\b", "weight": 0.3 }
+      ],
+      "feeds": [
+        { "path": "FILES/_xml/facebook.xml", "mustContain": "CDATA" },
+        { "path": "FILES/_xml/google.xml", "mustContain": "CDATA" },
+        { "path": "FILES/_xml/google1.xml", "mustContain": "CDATA" }
+      ]
+    },
+    {
+      "id": "xtech",
+      "name": "Xtech Commerce",
+      "signatures": [
+        { "pattern": "\\bxtech\\b", "weight": 0.7 }
+      ]
+    },
+    {
+      "id": "jet",
+      "name": "JET e-commerce",
+      "signatures": [
+        { "pattern": "\\bjet\\b", "weight": 0.2 }
+      ]
+    },
+    {
+      "id": "ecomclub",
+      "name": "E-com Club",
+      "signatures": [
+        { "pattern": "\\be-?com ?club\\b", "weight": 0.8 }
+      ]
+    },
+    {
+      "id": "vnda",
+      "name": "VNDA",
+      "signatures": [
+        { "pattern": "\\bvnda\\b", "weight": 0.8 }
+      ]
+    },
+    {
+      "id": "moovin",
+      "name": "Moovin",
+      "signatures": [
+        { "pattern": "\\bmoovin\\b", "weight": 0.8 }
+      ],
+      "feeds": [
+        { "path": "api/comparadores/googleshopping", "mustContain": "<rss" }
+      ]
+    },
+    {
+      "id": "wbuy",
+      "name": "Wbuy",
+      "signatures": [
+        { "pattern": "\\bwbuy\\b", "weight": 0.8 }
+      ]
+    }
+  ],
+  "flags": [
+    {
+      "id": "suspended",
+      "name": "Store suspended or under maintenance",
+      "signatures": [
+        { "pattern": "suspendedpage\\.cgi", "weight": 1.0 },
+        { "pattern": "estamos em manuten[cç][aã]o", "weight": 1.0 }
+      ]
+    },
+    {
+      "id": "wordpress",
+      "name": "WordPress",
+      "signatures": [
+        { "pattern": "wp-content/", "weight": 1.0 },
+        { "pattern": "wp-admin", "weight": 1.0 }
+      ]
+    },
+    {
+      "id": "conferecartoes",
+      "name": "Confere Cartões (payment seal)",
+      "signatures": [
+        { "pattern": "\\bconferecartoes\\b", "weight": 1.0 }
+      ]
+    }
+  ]
+}

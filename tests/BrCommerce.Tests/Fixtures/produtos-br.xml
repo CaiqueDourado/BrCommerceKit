@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<produtos>
+  <produto>
+    <id_produto>9001</id_produto>
+    <nome>Geladeira Frost Free 375 Litros</nome>
+    <descricao>Geladeira duplex &lt;b&gt;inox&lt;/b&gt;</descricao>
+    <marca>Marca Fria</marca>
+    <categoria>Eletrodomésticos</categoria>
+    <preco_de>R$ 4.299,00</preco_de>
+    <preco_por>R$ 3.799,90</preco_por>
+    <disponibilidade>Disponível</disponibilidade>
+    <ean>7896004000855</ean>
+    <link_produto>https://loja-exemplo.com.br/geladeira</link_produto>
+    <link_imagem>https://loja-exemplo.com.br/img/geladeira.jpg</link_imagem>
+    <genero>Unissex</genero>
+  </produto>
+  <produto>
+    <id_produto>9002</id_produto>
+    <nome>Fogão 4 bocas</nome>
+    <preco_por>1.299</preco_por>
+    <disponibilidade>Esgotado</disponibilidade>
+  </produto>
+</produtos>

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>brcommerce</AssemblyName>
+    <RootNamespace>BrCommerce.Cli</RootNamespace>
+    <PackageId>BrCommerce.Cli</PackageId>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>brcommerce</ToolCommandName>
+    <Description>Command-line tool: detect the platform and feeds of a store, inspect and convert product feeds, dump Shopify catalogs and audit catalogs for shared EANs and placeholder images.</Description>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BrCommerce.Detect\BrCommerce.Detect.csproj" />
+    <ProjectReference Include="..\BrCommerce.Feeds\BrCommerce.Feeds.csproj" />
+    <ProjectReference Include="..\BrCommerce.Quality\BrCommerce.Quality.csproj" />
+  </ItemGroup>
+
+</Project>

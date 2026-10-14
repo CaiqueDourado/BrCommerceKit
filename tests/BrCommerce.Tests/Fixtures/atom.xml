@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:g="http://base.google.com/ns/1.0">
+  <title>Loja Atom</title>
+  <entry>
+    <g:id>A1</g:id>
+    <title>Produto Atom</title>
+    <link rel="alternate" href="https://loja-exemplo.com.br/produto-atom"/>
+    <g:price>59,90 BRL</g:price>
+    <g:availability>http://schema.org/InStock</g:availability>
+  </entry>
+</feed>

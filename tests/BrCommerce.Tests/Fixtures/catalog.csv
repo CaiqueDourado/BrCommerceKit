@@ -1,0 +1,7 @@
+id,name,brand,gtin,image_hash,source
+1,Tênis Corrida Azul,Marca A,7891000315507,aaa111,loja1
+2,Geladeira Duplex,Marca B,7891000315507,ph-semfoto,loja1
+3,Fogão 4 bocas,Marca C,7891000315507,ph-semfoto,loja2
+4,Camiseta Básica,Marca D,123,ph-semfoto,loja2
+5,"Panela de pressão, 4,5L",Importado,7896004000855,ph-semfoto,loja3
+6,Panela antiaderente,Marca E,7896004000856,bbb222,loja3

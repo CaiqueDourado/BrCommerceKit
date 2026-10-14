@@ -1,0 +1,28 @@
+name: Platform missing or misdetected
+description: A store runs on a platform that BrCommerceKit does not recognise, or recognises wrongly.
+labels: [rules]
+body:
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      placeholder: e.g. Tray, Loja Integrada, Bagy
+    validations:
+      required: true
+  - type: textarea
+    id: urls
+    attributes:
+      label: Example stores
+      description: Public store URLs running on this platform (2 or 3 help a lot).
+    validations:
+      required: true
+  - type: textarea
+    id: signals
+    attributes:
+      label: How to recognise it
+      description: CDN hosts, script names, robots.txt lines, feed paths you know about.
+  - type: textarea
+    id: output
+    attributes:
+      label: Output of `brcommerce detect <url> --json`
+      render: json

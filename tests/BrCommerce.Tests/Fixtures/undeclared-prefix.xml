@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <item>
+      <g:id>1</g:id>
+      <g:title>Produto sem xmlns</g:title>
+      <price>10.00</price>
+      <g:price>R$ 1.299,90</g:price>
+      <google_brand>Marca Google Prefix</google_brand>
+    </item>
+  </channel>
+</rss>

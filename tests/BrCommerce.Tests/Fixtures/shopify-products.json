@@ -1,0 +1,11 @@
+{"products":[
+ {"id":111,"title":"Camiseta Básica","handle":"camiseta-basica","body_html":"<p>Algodão <strong>100%</strong></p>","vendor":"Marca Algodão","product_type":"Camisetas","tags":["verão","básicos"],
+  "images":[{"src":"https://cdn.shopify.com/s/files/camiseta-1.jpg"},{"src":"https://cdn.shopify.com/s/files/camiseta-2.jpg"}],
+  "variants":[
+   {"id":901,"title":"P / Branca","price":"79.90","compare_at_price":"99.90","available":true,"sku":"CAM-P-BR","barcode":"7891000315507"},
+   {"id":902,"title":"M / Preta","price":"79.90","compare_at_price":null,"available":false,"sku":"CAM-M-PR","barcode":"","featured_image":{"src":"https://cdn.shopify.com/s/files/camiseta-preta.jpg"}}
+  ]},
+ {"id":112,"title":"Caneca","handle":"caneca","vendor":"Marca Louça","tags":"cozinha, presente",
+  "images":[],
+  "variants":[{"id":903,"title":"Default Title","price":"35.00","available":true,"sku":"CAN-01"}]}
+]}

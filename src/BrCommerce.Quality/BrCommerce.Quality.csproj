@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>BrCommerce.Quality</PackageId>
+    <Description>Catalog quality checks for e-commerce data: GTIN/EAN check digit validation, generic or shared identifiers (the same EAN on unrelated products) and placeholder images (the same image hash on products of many brands). Zero dependencies.</Description>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+  <channel>
+    <title>Loja Exemplo</title>
+    <link>https://loja-exemplo.com.br</link>
+    <item>
+      <g:id>SKU-001</g:id>
+      <g:title><![CDATA[Tênis Corrida &amp; Caminhada   Azul]]></g:title>
+      <g:description>Tênis leve para corrida.</g:description>
+      <g:link>https://loja-exemplo.com.br/tenis-corrida-azul</g:link>
+      <g:image_link>https://loja-exemplo.com.br/img/1.jpg</g:image_link>
+      <g:additional_image_link>https://loja-exemplo.com.br/img/2.jpg</g:additional_image_link>
+      <g:additional_image_link>https://loja-exemplo.com.br/img/3.jpg</g:additional_image_link>
+      <g:price>299.90 BRL</g:price>
+      <g:sale_price>249.90 BRL</g:sale_price>
+      <g:availability>in stock</g:availability>
+      <g:brand>Marca Exemplo</g:brand>
+      <g:gtin>7891000315507</g:gtin>
+      <g:condition>new</g:condition>
+      <g:google_product_category>187</g:google_product_category>
+      <g:product_type>Calçados &gt; Tênis</g:product_type>
+      <g:shipping>
+        <g:country>BR</g:country>
+        <g:price>19.90 BRL</g:price>
+      </g:shipping>
+    </item>
+    <item>
+      <g:id>SKU-002</g:id>
+      <g:title>Meia Esportiva</g:title>
+      <g:link>https://loja-exemplo.com.br/meia</g:link>
+      <g:price>29.90 BRL</g:price>
+      <g:availability>out of stock</g:availability>
+    </item>
+  </channel>
+</rss>
