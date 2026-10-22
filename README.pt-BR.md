@@ -26,6 +26,8 @@ Esta biblioteca nasceu de anos rastreando e normalizando catálogos de milhares 
 
 As lojas em que essas regras foram testadas estão publicadas em [lojas-virtuais-brasil](https://github.com/CaiqueDourado/lojas-virtuais-brasil): 63.974 lojas virtuais brasileiras com a plataforma lida pelos mesmos três testes (declarada, nomes no HTML, caminho do feed).
 
+Para baixar as páginas quando a loja responde 403 ou precisa de JavaScript, veja a [scrapladder](https://github.com/CaiqueDourado/scrapladder): ela sobe do HTTP comum até o navegador e lembra, por domínio, o que funcionou.
+
 ## Pacotes
 
 | Pacote | O que faz |

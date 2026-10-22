@@ -28,6 +28,8 @@ This library comes from years of crawling and normalising catalogs of thousands 
 
 The stores those rules were tested on are published in [lojas-virtuais-brasil](https://github.com/CaiqueDourado/lojas-virtuais-brasil): 63,974 Brazilian online stores with their platform, read by the same three tests (declared, names in the HTML, feed path).
 
+To fetch the pages themselves when a store answers 403 or needs JavaScript, see [scrapladder](https://github.com/CaiqueDourado/scrapladder): it climbs from plain HTTP to a browser and remembers per domain what worked.
+
 ## Packages
 
 | Package | What it does |
