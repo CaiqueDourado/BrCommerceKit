@@ -24,6 +24,8 @@ Ferramentas genéricas (Wappalyzer, BuiltWith) conhecem as grandes plataformas g
 
 Esta biblioteca nasceu de anos rastreando e normalizando catálogos de milhares de lojas brasileiras. As regras e os casos de borda vêm da prática; o código é uma reescrita limpa e testada.
 
+As lojas em que essas regras foram testadas estão publicadas em [lojas-virtuais-brasil](https://github.com/CaiqueDourado/lojas-virtuais-brasil): 63.974 lojas virtuais brasileiras com a plataforma lida pelos mesmos três testes (declarada, nomes no HTML, caminho do feed).
+
 ## Pacotes
 
 | Pacote | O que faz |
@@ -63,6 +65,22 @@ foreach (var feed in resultado.Feeds)
 ```
 
 Como decide:
+
+```mermaid
+flowchart LR
+  D["Domínio"] --> H["Home + robots.txt<br/>redirects registrados,<br/>fallback para http"]
+  H --> S["Assinaturas com peso<br/>CDN 1,0 · nome 0,7 ·<br/>palavra comum 0,3"]
+  H --> F["Caminhos de feed conhecidos<br/>XMLData · fb_catalog ·<br/>products.json · amfeed"]
+  H --> N["Nome da loja<br/>og:site_name → DC.title →<br/>title → author"]
+  S --> T{"Pontuação ≥ 0,5?"}
+  T -->|"sim"| R["Plataforma · feeds · nome"]
+  T -.->|"não"| U["desconhecida"]:::dead
+  F -->|"responde e valida:<br/>pontuação 1,0"| R
+  N --> R
+  R --> FR["BrCommerce.Feeds<br/>RSS · Atom · produto ·<br/>Shopify products.json"]
+  FR --> Q["BrCommerce.Quality<br/>GTIN · códigos repetidos ·<br/>imagens genéricas"]
+  classDef dead fill:#f3f3f3,stroke:#bbbbbb,color:#777777;
+```
 
 1. Lê a home (seguindo e registrando redirects, com fallback para http) e o `robots.txt`.
 2. Aplica assinaturas com peso: um CDN da plataforma, como `vteximg.com.br`, vale 1.0; uma palavra curta e comum, como `tray`, vale 0.3 e nunca decide sozinha. Todos os padrões usam limite de palavra (o antigo `Contains("jet")` casava com "projeto").

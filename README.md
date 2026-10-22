@@ -26,6 +26,8 @@ Generic tools (Wappalyzer, BuiltWith) cover the big global platforms but miss mo
 
 This library comes from years of crawling and normalising catalogs of thousands of Brazilian stores. The rules and edge cases are field-tested; the code is a clean, tested rewrite.
 
+The stores those rules were tested on are published in [lojas-virtuais-brasil](https://github.com/CaiqueDourado/lojas-virtuais-brasil): 63,974 Brazilian online stores with their platform, read by the same three tests (declared, names in the HTML, feed path).
+
 ## Packages
 
 | Package | What it does |
@@ -68,6 +70,22 @@ foreach (var feed in result.Feeds)
 ```
 
 How it decides:
+
+```mermaid
+flowchart LR
+  D["Domain"] --> H["Home page + robots.txt<br/>redirects recorded,<br/>http fallback"]
+  H --> S["Weighted signatures<br/>CDN 1.0 · name 0.7 ·<br/>common word 0.3"]
+  H --> F["Well-known feed paths<br/>XMLData · fb_catalog ·<br/>products.json · amfeed"]
+  H --> N["Store name<br/>og:site_name → DC.title →<br/>title → author"]
+  S --> T{"Score ≥ 0.5?"}
+  T -->|"yes"| R["Platform · feeds · name"]
+  T -.->|"no"| U["unknown"]:::dead
+  F -->|"answers and validates:<br/>score 1.0"| R
+  N --> R
+  R --> FR["BrCommerce.Feeds<br/>RSS · Atom · produto ·<br/>Shopify products.json"]
+  FR --> Q["BrCommerce.Quality<br/>GTIN · shared codes ·<br/>placeholder images"]
+  classDef dead fill:#f3f3f3,stroke:#bbbbbb,color:#777777;
+```
 
 1. Reads the home page (following and recording redirects, falling back to http if https fails) and `robots.txt`.
 2. Applies weighted signatures: a platform CDN such as `vteximg.com.br` weighs 1.0; a short common word such as `tray` weighs 0.3 and never decides alone. All patterns use word boundaries.
