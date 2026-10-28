@@ -5,6 +5,8 @@
 ![.NET 8](https://img.shields.io/badge/.NET-8.0-512BD4)
 ![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen)
 
+![BrCommerceKit](docs/img/cover.png)
+
 **Toolkit for e-commerce data as it really exists in Brazil.** Detect which platform a store runs on and where its product feeds are, read those feeds whatever dialect they use, and find catalog problems that only show up across thousands of products.
 
 [Leia em português](README.pt-BR.md)

@@ -5,6 +5,8 @@
 ![.NET 8](https://img.shields.io/badge/.NET-8.0-512BD4)
 ![Dependências: 0](https://img.shields.io/badge/depend%C3%AAncias-0-brightgreen)
 
+![BrCommerceKit](docs/img/cover.pt-BR.png)
+
 **Kit para dados de e-commerce do jeito que eles existem no Brasil.** Descubra em qual plataforma uma loja roda e onde estão os feeds de produto, leia esses feeds em qualquer dialeto e encontre problemas de catálogo que só aparecem olhando milhares de produtos.
 
 [Read in English](README.md)
