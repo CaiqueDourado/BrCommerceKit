@@ -1,0 +1,43 @@
+{
+  "requestedUrl": "https://loja-exemplo.com.br/",
+  "finalUrl": "https://loja-exemplo.com.br/home",
+  "statusCode": 200,
+  "online": true,
+  "redirects": [
+    "https://loja-exemplo.com.br/home"
+  ],
+  "storeName": {
+    "value": "Loja Exemplo Moda",
+    "source": "og:site_name"
+  },
+  "platform": {
+    "id": "vtex",
+    "name": "VTEX",
+    "score": 1,
+    "evidence": [
+      "html: \"vteximg.com.br\" (weight 1.0)",
+      "html: \"vtexassets.com\" (weight 1.0)",
+      "feed: https://loja-exemplo.com.br/XMLData/googleshopping.xml"
+    ]
+  },
+  "candidates": [
+    {
+      "id": "vtex",
+      "name": "VTEX",
+      "score": 1,
+      "evidence": [
+        "html: \"vteximg.com.br\" (weight 1.0)",
+        "html: \"vtexassets.com\" (weight 1.0)",
+        "feed: https://loja-exemplo.com.br/XMLData/googleshopping.xml"
+      ]
+    }
+  ],
+  "flags": [],
+  "feeds": [
+    {
+      "platformId": "vtex",
+      "url": "https://loja-exemplo.com.br/XMLData/googleshopping.xml",
+      "contentType": "application/xml"
+    }
+  ]
+}

@@ -98,6 +98,16 @@ flowchart LR
 
 Supported platforms: VTEX, Nuvemshop, Shopify, Magento, WooCommerce, Loja Integrada, Tray, Wix, Mercado Shops, PrestaShop, UOL Loja, Iluria, Linx, EzCommerce/Lynx, Xtech, JET, E-com Club, VNDA, Moovin, Wbuy. Run `brcommerce rules` to list them. To add or improve one, see [docs/rules.md](docs/rules.md).
 
+### What a detection result looks like
+
+`DetectAsync` on a store that redirects to `/home`, serves a VTEX page and answers on `XMLData/googleshopping.xml`,
+serialized as `brcommerce detect --json` prints it. The pages come from the test fixtures, so no request leaves the machine.
+
+![One detection result as JSON](docs/img/detection-json.png)
+
+Full JSON: [`docs/example-detection.json`](docs/example-detection.json), written by
+[`scripts/make_json.py`](scripts/make_json.py) through [`tools/DetectExample`](tools/DetectExample/Program.cs).
+
 ### Read a product feed
 
 ```csharp

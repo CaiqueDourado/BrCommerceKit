@@ -93,6 +93,16 @@ flowchart LR
 
 Para adicionar ou melhorar uma plataforma, veja [docs/rules.md](docs/rules.md).
 
+### Como fica uma detecção
+
+`DetectAsync` numa loja que redireciona para `/home`, serve uma página VTEX e responde em `XMLData/googleshopping.xml`,
+serializado como `brcommerce detect --json` imprime. As páginas vêm das fixtures dos testes, então nenhuma requisição sai da máquina.
+
+![Uma detecção em JSON](docs/img/detection-json.png)
+
+JSON completo: [`docs/example-detection.json`](docs/example-detection.json), gerado por
+[`scripts/make_json.py`](scripts/make_json.py) via [`tools/DetectExample`](tools/DetectExample/Program.cs).
+
 ### Ler um feed
 
 ```csharp
