@@ -7,7 +7,7 @@
 
 ![BrCommerceKit](docs/img/cover.pt-BR.png)
 
-**Kit para dados de e-commerce do jeito que eles existem no Brasil.** Descubra em qual plataforma uma loja roda e onde estão os feeds de produto, leia esses feeds em qualquer dialeto e encontre problemas de catálogo que só aparecem olhando milhares de produtos.
+**Dados de e-commerce do jeito que eles são no Brasil.** Diz em que plataforma a loja roda e onde está o feed de produtos dela. Lê esse feed, seja qual for a bagunça. E acha problemas de catálogo que só aparecem olhando milhares de produtos.
 
 [Read in English](README.md)
 
@@ -22,13 +22,15 @@ https://lojaexemplo.com.br/
 
 ## Por quê
 
-Ferramentas genéricas (Wappalyzer, BuiltWith) conhecem as grandes plataformas globais, mas deixam passar a maioria das brasileiras — Loja Integrada, Nuvemshop, Tray, VNDA, Moovin, Wbuy, Iluria, Xtech, JET, E-com Club, EzCommerce, UOL Loja — e nenhuma **encontra o feed de produtos**. Os leitores de feed, por sua vez, esperam XML do Google Merchant impecável, enquanto os feeds reais usam `nome`, `preco_por`, `disponibilidade` e `ean`, repetem `<price>` e `<g:price>`, esquecem de declarar `xmlns:g` e escrevem preço como `R$ 1.299,90`.
+O Wappalyzer e o BuiltWith conhecem as grandes plataformas do mundo. Não pegam a maioria das brasileiras: Loja Integrada, Nuvemshop, Tray, VNDA, Moovin, Wbuy, Iluria, Xtech, JET, E-com Club, EzCommerce, UOL Loja. E nenhum deles **acha o feed de produtos**.
 
-Esta biblioteca nasceu de anos rastreando e normalizando catálogos de milhares de lojas brasileiras. As regras e os casos de borda vêm da prática; o código é uma reescrita limpa e testada.
+Os leitores de feed esperam o XML limpinho do Google Merchant. O feed brasileiro de verdade diz `nome`, `preco_por`, `disponibilidade` e `ean`. Repete `<price>` e `<g:price>`, esquece de declarar o `xmlns:g` e escreve preço como `R$ 1.299,90`.
 
-As lojas em que essas regras foram testadas estão publicadas em [lojas-virtuais-brasil](https://github.com/CaiqueDourado/lojas-virtuais-brasil): 63.974 lojas virtuais brasileiras com a plataforma lida pelos mesmos três testes (declarada, nomes no HTML, caminho do feed).
+Eu aprendi essas regras em anos coletando o catálogo de milhares de lojas brasileiras. O código é uma reescrita limpa, com testes.
 
-Para baixar as páginas quando a loja responde 403 ou precisa de JavaScript, veja a [scrapladder](https://github.com/CaiqueDourado/scrapladder): ela sobe do HTTP comum até o navegador e lembra, por domínio, o que funcionou.
+As lojas em que eu testei estão publicadas no [lojas-virtuais-brasil](https://github.com/CaiqueDourado/lojas-virtuais-brasil): 63.974 lojas virtuais brasileiras com a plataforma de cada uma, achada pelos mesmos três testes (o que a loja declara, nomes no HTML, caminho do feed).
+
+Quando a loja responde 403 ou precisa de JavaScript, use o [scrapladder](https://github.com/CaiqueDourado/scrapladder) para buscar a página. Ele sobe do HTTP simples até um navegador de verdade e lembra o que funcionou em cada domínio.
 
 ## Pacotes
 

@@ -7,7 +7,7 @@
 
 ![BrCommerceKit](docs/img/cover.png)
 
-**Toolkit for e-commerce data as it really exists in Brazil.** Detect which platform a store runs on and where its product feeds are, read those feeds whatever dialect they use, and find catalog problems that only show up across thousands of products.
+**E-commerce data the way it really is in Brazil.** It tells you which platform a store runs on and where its product feed is. It reads that feed, whatever mess it's in. And it finds catalog problems that only show up across thousands of products.
 
 [Leia em português](README.pt-BR.md)
 
@@ -24,13 +24,15 @@ https://lojaexemplo.com.br/
 
 ## Why
 
-Generic tools (Wappalyzer, BuiltWith) cover the big global platforms but miss most Brazilian ones — Loja Integrada, Nuvemshop, Tray, VNDA, Moovin, Wbuy, Iluria, Xtech, JET, E-com Club, EzCommerce, UOL Loja — and none of them **finds the product feed**. Feed parsers, in turn, expect clean Google Merchant XML, while real Brazilian feeds use `nome`, `preco_por`, `disponibilidade` and `ean`, repeat `<price>` and `<g:price>`, forget to declare `xmlns:g` and write prices as `R$ 1.299,90`.
+Wappalyzer and BuiltWith know the big global platforms. They miss most Brazilian ones: Loja Integrada, Nuvemshop, Tray, VNDA, Moovin, Wbuy, Iluria, Xtech, JET, E-com Club, EzCommerce, UOL Loja. And none of them **finds the product feed**.
 
-This library comes from years of crawling and normalising catalogs of thousands of Brazilian stores. The rules and edge cases are field-tested; the code is a clean, tested rewrite.
+Feed parsers expect clean Google Merchant XML. Real Brazilian feeds say `nome`, `preco_por`, `disponibilidade` and `ean`. They repeat `<price>` and `<g:price>`, forget to declare `xmlns:g`, and write prices as `R$ 1.299,90`.
 
-The stores those rules were tested on are published in [lojas-virtuais-brasil](https://github.com/CaiqueDourado/lojas-virtuais-brasil): 63,974 Brazilian online stores with their platform, read by the same three tests (declared, names in the HTML, feed path).
+I learned these rules over years of crawling the catalogs of thousands of Brazilian stores. The code is a clean rewrite, with tests.
 
-To fetch the pages themselves when a store answers 403 or needs JavaScript, see [scrapladder](https://github.com/CaiqueDourado/scrapladder): it climbs from plain HTTP to a browser and remembers per domain what worked.
+The stores I tested them on are published in [lojas-virtuais-brasil](https://github.com/CaiqueDourado/lojas-virtuais-brasil): 63,974 Brazilian online stores with their platform, found by the same three checks (what the store declares, names in the HTML, feed path).
+
+When a store answers 403 or needs JavaScript, use [scrapladder](https://github.com/CaiqueDourado/scrapladder) to fetch the page. It climbs from plain HTTP to a real browser and remembers what worked on each domain.
 
 ## Packages
 
